@@ -1,0 +1,5 @@
+runtime: python38
+service: default
+handlers:
+- url: /.*
+  script: main.py
