@@ -3,6 +3,7 @@
 
 import random
 import copy
+import requests
 
 
 class Game:
@@ -24,7 +25,17 @@ class Game:
                 grid_.remove(letter)
             else:
                 return False
-        return True
+
+        # Check to see if word is in English dictionary
+        return self.__check_dictionary(word)
+
+    @staticmethod
+    def __check_dictionary(word):
+        """Check if word exists in English dictionary"""
+        response = requests.get(f"https://wagon-dictionary.herokuapp.com/{word}")
+        json_response = response.json()
+        return json_response["found"]
+
 
 
 # if __name__ == '__main__':
