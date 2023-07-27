@@ -25,6 +25,8 @@ class Game:
                 grid_.remove(letter)
             else:
                 return False
+
+        # Check to see if word is in English dictionary
         return self.__check_dictionary(word)
 
     @staticmethod
