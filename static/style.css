@@ -12,8 +12,10 @@ body {
   width: 24px;
   display: inline-block;
   text-align: center;
-  background-color: #333;
-  color: #eee;
+  /* background-color: #333;
+  color: #eee; */
+  background-color: #ADD8E6;
+  color: #666;
 }
 #form, #results {
   margin: 1em 0;
